@@ -9,7 +9,6 @@ import fs from "fs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const create = async () => {
-  console.log(join(__dirname, "files", "fresh.txt"));
   if (fs.existsSync(join(__dirname, "files", "fresh.txt"))) {
     throw new Error("FS operation failed: File already exists");
   } else {
